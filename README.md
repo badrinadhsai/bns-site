@@ -1,8 +1,16 @@
 # BNS — Build · Navigate · Scale
 
-**Digital Solutions for Modern Businesses**
+Founder-built studio site for my independent digital solutions practice.
 
-https://buildnavigatescale.com
+Services include websites, search/growth, practical AI, and automation.
+
+Static HTML/CSS/JS site.
+
+Live: https://bns-site-nu.vercel.app/
+
+Business/studio work — separate from my personal engineering projects.
+
+**Digital Solutions for Modern Businesses**
 
 ---
 
@@ -107,7 +115,7 @@ If a bad deployment goes live:
 2. Connect repository in Netlify dashboard
 3. Build command: (leave empty — static site)
 4. Publish directory: `.` (or `bns-site` if repo root)
-5. Set custom domain: `buildnavigatescale.com`
+5. (Optional) Set a custom domain. Current production URL: `https://bns-site-nu.vercel.app/`
 6. Enable HTTPS
 
 ### Vercel
@@ -136,12 +144,12 @@ If a bad deployment goes live:
 
 ## Domain Configuration
 
-### DNS Records
+### DNS Records (only if a custom domain is added; current production is `https://bns-site-nu.vercel.app/`)
 
 ```
 Type    Name    Value
 A       @       <hosting-ip>
-CNAME   www     buildnavigatescale.com
+CNAME   www     <custom-domain>
 ```
 
 ### HTTPS
@@ -151,11 +159,7 @@ CNAME   www     buildnavigatescale.com
 
 ### Redirects
 
-All non-canonical versions must redirect to `https://buildnavigatescale.com`:
-
-- `http://buildnavigatescale.com` → `https://buildnavigatescale.com`
-- `http://www.buildnavigatescale.com` → `https://buildnavigatescale.com`
-- `https://www.buildnavigatescale.com` → `https://buildnavigatescale.com`
+The canonical production URL is `https://bns-site-nu.vercel.app/`. If a custom domain is added later, redirect all non-canonical variants (http, www) to the canonical domain.
 
 ## Form Setup
 
@@ -182,9 +186,9 @@ Connect the form to your own API endpoint.
 
 1. Deploy the website
 2. Go to https://search.google.com/search-console
-3. Add property: `https://buildnavigatescale.com`
+3. Add property: `https://bns-site-nu.vercel.app/`
 4. Verify ownership (DNS, HTML file, or meta tag)
-5. Submit sitemap: `https://buildnavigatescale.com/sitemap.xml`
+5. Submit sitemap: `https://bns-site-nu.vercel.app/sitemap.xml`
 6. Request indexing for important pages
 7. Monitor indexing status
 
