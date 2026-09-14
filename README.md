@@ -61,6 +61,44 @@ php -S localhost:3000
 # Open http://localhost:3000
 ```
 
+Or with Node (uses the included dev-only `server.js`):
+
+```bash
+cd bns-site
+node server.js
+# Open http://localhost:3001
+```
+
+## Deployment Workflow
+
+GitHub → Vercel automatic deployment. No manual uploads.
+
+1. Edit the website locally.
+2. Test locally (see above).
+3. Run:
+   ```bash
+   git add .
+   git commit -m "Describe change"
+   git push
+   ```
+4. Vercel automatically detects the push, creates a deployment, and updates production.
+
+Vercel settings for this project (static site, zero build):
+
+- Framework Preset: Other
+- Build Command: none
+- Output Directory: project root (`.`)
+- Install Command: none
+- Production Branch: `main`
+
+### Emergency rollback
+
+If a bad deployment goes live:
+
+1. Open Vercel → project `bns-site` → Deployments.
+2. Find the previous successful (Ready) deployment.
+3. Open its menu → Promote to Production (Instant Rollback).
+
 ## Deployment
 
 ### Netlify
