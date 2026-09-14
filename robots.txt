@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://buildnavigatescale.com/sitemap.xml
+Sitemap: https://bns-site-nu.vercel.app/sitemap.xml
